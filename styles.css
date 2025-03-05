@@ -1,44 +1,361 @@
 /*Kaveri Damkondwar*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Montserrat:wght@300;400;600&display=swap');
+
+/* General Styles */
 body {
-	line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
 }
-ol, ul {
-	list-style: none;
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, #8ecae6, #ffffff);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-blockquote, q {
-	quotes: none;
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+nav ul {
+    display: flex;
+    list-style: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.hero img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+/* Plan Your Trip Section */
+#plan {
+    background-color: #E6C85A; /* Yellow background */
+    padding: 50px 5%;
+    text-align: center;
+}
+
+/* Heading Styling */
+#plan h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Flexbox Layout */
+#plan > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Individual Section Styling */
+#plan section {
+    background-color: #5EA8C8; /* Blue background */
+    padding: 20px;
+    width: 180px; /* Adjusted to match design */
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Slightly rounded corners */
+}
+
+/* Section Heading */
+#plan section h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Icons Styling */
+#plan section img {
+    width: 80px; /* Adjust icon size */
+    height: auto;
+}
+
+/* Links - Remove default underline */
+#plan section a {
+    text-decoration: none;
+}
+
+/* Styling for the Testimonials section */
+#testimonials {
+    background-color: white;
+    padding: 50px 5%;
+    text-align: center;
+}
+
+/* Style the heading */
+#testimonials h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Flex container for testimonials */
+#testimonials > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Responsive layout */
+}
+
+/* Individual testimonial card */
+#testimonials section {
+    text-align: center;
+    max-width: 250px;
+}
+
+/* Profile image styling */
+#testimonials section img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Circular profile images */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Name styling */
+#testimonials section h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+/* Location styling */
+#testimonials section p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+/* Styling for quotes */
+#testimonials section q {
+    font-size: 14px;
+    font-style: italic;
+    display: block;
+    color: #333;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Styling for the About Your Destination section */
+#about {
+    background-color: #5d98cf; /* Light blue background */
+    padding: 40px 5%;
+    color: black;
+}
+
+#about h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#about > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* Space between items */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+#about section {
+    text-align: center;
+}
+
+#about section img {
+    width: 60px; /* Adjust icon size */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+#about section h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+#about section p {
+    font-size: 14px;
+}
+
+/* General Form Styling */
+#contact {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#contact h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.form-required {
+    font-style: italic;
+    color: #888;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4a0080;
+    text-transform: uppercase;
+    margin: 10px 0 5px;
+}
+
+/* Required Asterisk */
+.required {
+    color: #a100ff;
+    font-weight: bold;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #800080;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+/* Radio Button Styling */
+.radio-input {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.radio-input input {
+    display: none;
+}
+
+.radio-control {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #800080;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+}
+
+.radio-input input:checked + .radio-control {
+    background-color: #800080;
+    border-color: #800080;
+}
+
+.radio-input input:checked + .radio-control::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Select Dropdown Styling */
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select select {
+    appearance: none;
+    padding-right: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.custom-select::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #800080;
+}
+
+/* Submit Button */
+#mySubmit {
+    background-color: #800080;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 150px;
+    display: block;
+    margin-top: 15px;
+}
+
+#mySubmit:hover {
+    background-color: #5a005a;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
 }
